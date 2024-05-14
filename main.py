@@ -12,7 +12,7 @@ class JsonFormatter(Formatter):
     def format(self, record):
         json_record = {}
         json_record["message"] = record.getMessage()
-        json_record["level"] = record.levelname
+        json_record["level"] = record.levelname.lower()
         return json.dumps(json_record)
 
 
