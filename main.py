@@ -7,7 +7,7 @@ import uvicorn
 # https://www.sheshbabu.com/posts/fastapi-structured-json-logging/
 class JsonFormatter(Formatter):
     def __init__(self):
-        super(JsonFormatter, self).__init__()
+        super().__init__()
 
     def format(self, record):
         json_record = {}
